@@ -19,6 +19,8 @@
 
 package org.kiji.mapreduce;
 
+import org.apache.hadoop.mapreduce.TaskInputOutputContext;
+
 import org.kiji.annotations.ApiAudience;
 import org.kiji.annotations.ApiStability;
 import org.kiji.annotations.Inheritance;
@@ -41,4 +43,7 @@ public interface KijiTableContext extends KijiContext, KijiPutter {
    * @return the entity ID for the specified Kiji row key.
    */
   EntityId getEntityId(Object... components);
+
+  /** @return the underlying Hadoop MapReduce context. */
+  TaskInputOutputContext getMapReduceContext();
 }
