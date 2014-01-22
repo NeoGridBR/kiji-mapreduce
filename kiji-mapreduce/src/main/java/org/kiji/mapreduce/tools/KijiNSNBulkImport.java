@@ -18,10 +18,13 @@
  */
 package org.kiji.mapreduce.tools;
 
-import com.google.common.base.Preconditions;
-
 import java.io.IOException;
 import java.util.List;
+
+import com.google.common.base.Preconditions;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.kiji.annotations.ApiAudience;
 import org.kiji.common.flags.Flag;
@@ -40,9 +43,6 @@ import org.kiji.schema.KijiTable;
 import org.kiji.schema.tools.KijiToolLauncher;
 import org.kiji.schema.tools.RequiredFlagException;
 import org.kiji.schema.util.ResourceUtils;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * NSN Bulk Import.
